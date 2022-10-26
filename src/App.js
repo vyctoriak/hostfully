@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedProperty } from './store/property';
 
 function App() {
-  const selectProperty = useSelector((state) => state.property.selectProperty);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.property.properties);
 
@@ -30,8 +29,8 @@ function App() {
             />
           );
         })}
-        {selectProperty && <BookReservation />}
       </Container>
+      <BookReservation />
     </div>
   );
 }
